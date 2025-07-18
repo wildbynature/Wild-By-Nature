@@ -5,15 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sign Up & Login</title>
   <style>
+    /* Blurred background image */
+    .background-blur {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('bgsign.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(2px);
+      transform: scale(1.05);
+      z-index: -2;
+    }
+
+    /* Black overlay on top of blurred background */
+    .background-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* adjust opacity for darkness */
+      z-index: -1;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('bgsign.jpg') no-repeat center center fixed;
-      background-size: cover;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       height: 100vh;
+      padding-left: 5vw;
+      position: relative;
+      overflow: hidden;
     }
 
     .container {
@@ -25,12 +49,13 @@
       color: white;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
       text-align: center;
+      z-index: 1;
     }
 
     .form-box {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 3rem;
     }
 
     .form-box input {
@@ -38,6 +63,13 @@
       font-size: 1rem;
       border-radius: 8px;
       border: none;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .form-box input::placeholder {
+      color: #ccc;
     }
 
     button {
@@ -60,9 +92,15 @@
   </style>
 </head>
 <body>
+
+  <!-- Background layers -->
+  <div class="background-blur"></div>
+  <div class="background-overlay"></div>
+
+  <!-- Main Form Container -->
   <div class="container">
 
-    <!-- Signup with User Info -->
+    <!-- Signup -->
     <div class="form-box" id="signup-box">
       <h2>Sign Up</h2>
       <input type="text" id="signup-name" placeholder="Full Name" required>
@@ -71,21 +109,21 @@
       <button onclick="sendOTP()">Send OTP</button>
     </div>
 
-    <!-- OTP Entry -->
+    <!-- OTP -->
     <div class="form-box hidden" id="otp-box">
       <h2>Enter OTP</h2>
       <input type="text" id="otp-input" placeholder="Enter OTP" required>
       <button onclick="verifyOTP()">Verify OTP</button>
     </div>
 
-    <!-- Password Creation -->
+    <!-- Password -->
     <div class="form-box hidden" id="password-box">
       <h2>Create Password</h2>
       <input type="password" id="new-password" placeholder="Create Password" required>
       <button onclick="savePassword()">Finish Sign Up</button>
     </div>
 
-    <!-- Login Page -->
+    <!-- Login -->
     <div class="form-box hidden" id="login-box">
       <h2>Login</h2>
       <input type="text" id="login-phone" placeholder="Phone Number" required>
@@ -93,7 +131,7 @@
       <button onclick="login()">Login</button>
     </div>
 
-    <!-- Success Message -->
+    <!-- Success -->
     <div class="form-box hidden" id="success-box">
       <h2>Login Successful 🎉</h2>
       <p>Welcome back, <span id="user-name"></span>!</p>
@@ -101,6 +139,7 @@
 
   </div>
 
+  <!-- JS Logic -->
   <script>
     let generatedOTP = '';
     let savedUser = {
@@ -110,7 +149,6 @@
       password: ''
     };
 
-    // Step 1: Send OTP
     function sendOTP() {
       const name = document.getElementById("signup-name").value.trim();
       const email = document.getElementById("signup-email").value.trim();
@@ -126,13 +164,12 @@
       savedUser.phone = phone;
 
       generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
-      console.log("OTP Sent:", generatedOTP); // simulate SMS
+      console.log("OTP Sent:", generatedOTP); // Simulated OTP
 
       document.getElementById("signup-box").classList.add("hidden");
       document.getElementById("otp-box").classList.remove("hidden");
     }
 
-    // Step 2: Verify OTP
     function verifyOTP() {
       const entered = document.getElementById("otp-input").value.trim();
       if (entered === generatedOTP) {
@@ -143,7 +180,6 @@
       }
     }
 
-    // Step 3: Set Password
     function savePassword() {
       const password = document.getElementById("new-password").value;
       if (password.length < 4) {
@@ -159,7 +195,6 @@
       document.getElementById("login-box").classList.remove("hidden");
     }
 
-    // Step 4: Login
     function login() {
       const phone = document.getElementById("login-phone").value.trim();
       const password = document.getElementById("login-password").value;

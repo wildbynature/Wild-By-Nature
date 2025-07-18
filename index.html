@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wildlife Lens</title>
@@ -10,64 +10,76 @@
 </head>
 <body>
 
-<!-- Splash Screen -->
-<div id="splash-screen">
-  <div class="splash-content">
-    <div class="blinking-eyes">
-      <img src="img.avif" alt="Wild Eyes" class="eye-img" />
-    </div>
-    <button id="enterSiteBtn">LET'S GO</button>
+
+<!-- TOP HEADER -->
+<header class="top-header">
+  <div class="logo">
+    <img src="img.avif" alt="Wildlife Lens Logo" />
+    <span><br><small></small></span>
   </div>
 
-  <!-- Roar Sound -->
-  <audio id="roarSound" src="sounds/roar.mp3" preload="auto"></audio>
+  <nav class="main-nav">
+    <a href="#">HOME</a>
+    <a href="#">ABOUT US</a>
+
+    <!-- GALLERIES DROPDOWN -->
+    <div class="dropdown">
+      <a href="#">GALLERIES <i class="fa fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+        <li><a href="members-gallery.html">Members Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- MARKETPLACE DROPDOWN -->
+    <div class="dropdown highlighted">
+      <a href="#">MARKETPLACE <i class="fa fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="merchandise.html">Merchandise</a></li>
+        <li><a href="used-gear.html">Used Gear</a></li>
+      </ul>
+    </div>
+
+    <a href="#">BLOG</a>
+    <a href="#">CONTACT US</a>
+  </nav>
+
+  <a href="signup.html" class="member-btn">MEMBER ZONE</a>
+</header>
+
+<!-- BOTTOM NAVIGATION -->
+<div class="bottom-bar">
+  <div class="left-nav">
+    <a href="workshop.html">Workshops</a>
+    <a href="safari.html">Safaris</a>
+    <a href="competition.html">Competitions</a>
+    <a href="exhibition.html">Exhibitions</a>
+    <a href="safinfo.html">Parks & Reserves</a>
+    <a href="#">Conservation</a>
+  </div>
+
+  <div class="right-nav">
+ 
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
 </div>
 
 
-  <header>
-    <div class="logo">
-      <img src="img.avif" alt="Wildlife Lens Logo" />
-    </div>
-    <nav>
-      <ul class="nav-links">
-       <li><a href="index.html">Home</a></li>
-       <li class="dropdown">
-            <a href="#">Galleria</a>
-          <ul class="dropdown-content small-dropdown">
-          <li><a href="mentorsgall.html">Mentors Gallery</a></li>
-         <li><a href="members-gallery.html">Members Gallery</a></li>
-         </ul>
-         </li>
 
-        <li class="dropdown"><a href="#acti.html">Activities</a>
-        <ul class="dropdown-content">
-        <li><a href="exhibition.html">Exhibition</a></li>
-        <li><a href="safari.html">Safaris</a></li>
-        <li><a href="workshop.html">Workshop</a></li>
-        <li><a href="competition.html">Competition</a></li>
-       </ul>
-       </li>
-        <li class="dropdown">
-        <a href="#">Marketplace</a>
-         <ul class="dropdown-content small-dropdown">
-                  <li><a href="merchandise.html">Merchandise</a></li>
-                  <li><a href="used-gear.html">Used Gear</a></li>
 
-        </ul>
-        </li>
 
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
-      </ul>
-    </nav>
-    
-  <!-- Sign In Button -->
-  <div class="auth-button">
-    <a href="signup.html" class="login-btn">Members Sign up </a>
-  </div>
 
-  </header>
+
+
+
+
+
+
+
 
 <div class="slider">
   <div class="slide active">
