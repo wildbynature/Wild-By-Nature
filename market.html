@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketplace - Wildlife Lens</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; }
+    header, footer { background-color: #fff; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    nav ul { display: flex; gap: 20px; list-style: none; padding: 0; }
+    nav ul li a { text-decoration: none; color: #333; }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.2s ease-in-out;
+    }
+
+    .card:hover { transform: scale(1.02); }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .card-content p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .card-content strong {
+      color: #222;
+    }
+
+    .contact {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="upload-gear.html">Sell Your Gear</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- TITLE -->
+  <h1>Marketplace - Browse Used Gear</h1>
+
+  <!-- DYNAMIC PRODUCT GRID -->
+  <div class="grid" id="gearList">
+    <!-- Cards will be inserted here by JavaScript -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Wildlife Lens. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Firebase Scripts -->
+  <script type="module">
+    // 🔧 Replace this with your own Firebase config
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCXnlZjl2DdoyrmWWWo7xA6yciAFZo0fDM",
+  authDomain: "store-3ac4c.firebaseapp.com",
+  projectId: "store-3ac4c",
+  storageBucket: "store-3ac4c.firebasestorage.app",
+  messagingSenderId: "64981634343",
+  appId: "1:64981634343:web:564af1324f806bcfd42d02",
+  measurementId: "G-YFTSMJ11Y8"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const gearList = document.getElementById('gearList');
+
+    async function loadGear() {
+      const querySnapshot = await getDocs(collection(db, "gears"));
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${data.imageUrl}" alt="Gear Image">
+          <div class="card-content">
+            <h3>${data.productName}</h3>
+            <p><strong>Brand:</strong> ${data.brand}</p>
+            <p><strong>Condition:</strong> ${data.condition}</p>
+            <p><strong>Purchase Date:</strong> ${data.purchaseDate}</p>
+            <p><strong>Description:</strong> ${data.description}</p>
+            <p class="contact">📞 ${data.ownerPhone}</p>
+          </div>
+        `;
+        gearList.appendChild(card);
+      });
+    }
+
+    loadGear();
+  </script>
+
+</body>
+</html>
+

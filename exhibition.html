@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exhibition - Wildlife Lens</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+    }
+.hero-img {
+  width: 918;
+  height: 549px; /* smaller height */
+  object-fit: cover;
+  display: block;
+  margin-bottom: 40px; /* add space below image */
+  padding-left: 160px;
+}
+
+
+
+    .exhibition-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .exhibition-section h2 {
+      font-size: 2rem;
+      color: #304c3b;
+      margin-bottom: 30px;
+    }
+
+    .exhibition-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .exhibition-item {
+      width: 300px;
+    }
+
+    .exhibition-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .exhibition-item img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content li a {
+  padding: 8px 14px;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+    header, footer {
+      background-color: #fff;
+      color: #333;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+       <li class="dropdown">
+            <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+          <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+         <li><a href="members-gallery.html">Members Gallery</a></li>
+         </ul>
+         </li>
+
+        <li class="dropdown"><a href="#acti.html">Activities</a>
+        <ul class="dropdown-content">
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="safari.html">Safaris</a></li>
+        <li><a href="workshop.html">Workshop</a></li>
+        <li><a href="competition.html">Competition</a></li>
+       </ul>
+       </li>
+        <li class="dropdown">
+        <a href="#">Marketplace</a>
+         <ul class="dropdown-content small-dropdown">
+                  <li><a href="merchandise.html">Merchandise</a></li>
+                  <li><a href="used-gear.html">Used Gear</a></li>
+
+        </ul>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <img src="With Frame 1.png" alt="Exhibition Banner" class="hero-img" />
+
+  <!-- EXHIBITION SECTION -->
+  <section class="exhibition-section">
+    <div class="exhibition-gallery">
+      <div class="exhibition-item">
+        <h3>Big Cats of India</h3>
+        <img src="With Frame 2.png" alt="Big Cats" />
+      </div>
+      <div class="exhibition-item">
+        <h3>Wings of the Wild</h3>
+        <img src="With Frame 3.png" alt="Birds" />
+      </div>
+      <div class="exhibition-item">
+        <h3>Life in the Jungle</h3>
+        <img src="With Frame 4.png" alt="Forest Life" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img.avif" alt="Logo" />
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="mentorship.html">Mentorship</a></li>
+          <li><a href="safari.html">Safaris</a></li>
+          <li><a href="competition.html">Competitions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+      <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+       <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="youtude" /></a>
+      
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

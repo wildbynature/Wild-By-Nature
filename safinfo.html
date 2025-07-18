@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Safari Information</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+    }
+
+    header, footer {
+      background-color: #ffffff;
+      color: #333;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .safari-page-content {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .safari-page-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+    }
+
+    .safari-page-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #064118;
+      text-align: justify;
+    }
+
+    
+    @media (max-width: 768px) {
+      .safari-page-content h1 {
+        font-size: 2rem;
+      }
+
+      .site-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+       <li class="dropdown">
+            <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+          <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+         <li><a href="members-gallery.html">Members Gallery</a></li>
+         </ul>
+         </li>
+
+        <li class="dropdown"><a href="#acti.html">Activities</a>
+        <ul class="dropdown-content">
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="safari.html">Safaris</a></li>
+        <li><a href="workshop.html">Workshop</a></li>
+        <li><a href="competition.html">Competition</a></li>
+       </ul>
+       </li>
+        <li class="dropdown">
+        <a href="#">Marketplace</a>
+         <ul class="dropdown-content small-dropdown">
+                  <li><a href="merchandise.html">Merchandise</a></li>
+                  <li><a href="used-gear.html">Used Gear</a></li>
+
+        </ul>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <section class="safari-page-content">
+    <h1>WILDLIFE PARKS AND RESERVES</h1>
+    <p>
+      After learning about numerous incidents and cases of cheating, from fellow wildlife enthusiasts, we decided to take a step in the matter. We did a thorough research to compile the names and details of approximately 165 wildlife parks and reserves in India and went above and beyond to uncover the official websites of these treasures, which are monitored and managed by the Government of India.
+      <br><br>
+      All information has been meticulously researched and verified to ensure the highest level of accuracy. If you notice any errors, please do let us know, and we will gladly update our records.
+    </p>
+    <br><br>
+     <h2>Verified Sanctuaries & National Parks of India</h2>
+  <input type="text" id="searchBox" placeholder="Search by name...">
+
+  <div id="sanctuaryContainer">
+    <details>
+      <summary>Andhra Pradesh</summary>
+      <ul>
+        <li><strong>Kolleru Bird Sanctuary</strong> – <a href="http://www.forests.ap.gov.in/kolleru.php" target="_blank">Visit</a></li>
+        <li><strong>Manjira Bird Sanctuary</strong> – <a href="https://sangareddy.telangana.gov.in/tourist-place/manjeera-wild-life-sanctuary/" target="_blank">Visit</a></li>
+        <li><strong>Nelapattu Bird Sanctuary</strong> – <a href="http://forests.ap.gov.in/nelapattu.php" target="_blank">Visit</a></li>
+        <li><strong>Rollapadu Great Indian Bustard Sanctuary</strong> – <a href="http://forests.ap.gov.in/rollapadu.php" target="_blank">Visit</a></li>
+        <li><strong>Sri Lankamalleshwara Wildlife Sanctuary</strong> – <a href="http://www.forests.ap.gov.in/lankamalleswara.php" target="_blank">Visit</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Arunachal Pradesh</summary>
+      <ul>
+        <li><strong>Namdapha Tiger Reserve</strong> – <a href="https://www.namdaphatigerreserve.org" target="_blank">Visit</a></li>
+        <li><strong>Pakke Tiger Reserve</strong> – <a href="https://arunachalforests.gov.in/wildlife_pakke_wstr.html" target="_blank">Visit</a></li>
+        <li><strong>Kamlang Tiger Reserve</strong> – <a href="https://kamlangtigerreserve.org/" target="_blank">Visit</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Assam</summary>
+      <ul>
+        <li><strong>Kaziranga National Park</strong> – <a href="https://sewasetu.assam.gov.in/site/service-apply/online-safari-booking-kaziranga-national-park" target="_blank">Visit</a></li>
+        <li><strong>Maguri Beel</strong> – <a href="https://forest.assam.gov.in/home.php" target="_blank">Visit</a></li>
+        <li><strong>Dehing Patkai</strong> – <a href="https://forest.assam.gov.in/home.php" target="_blank">Visit</a></li>
+        <li><strong>Manas National Park</strong> – <a href="https://www.manasnptr.in/user/index" target="_blank">Visit</a></li>
+        <li><strong>Pobitora Wildlife Sanctuary</strong> – <a href="https://pobitorasafari.in/user/index" target="_blank">Visit</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Bihar</summary>
+      <ul>
+        <li><strong>Valmiki Tiger Reserve</strong> – <a href="https://valmikitigerreserve.com/" target="_blank">Visit</a></li>
+        <li><strong>Rajgir Wildlife Sanctuary</strong> – <a href="https://rajgirsafari.bihar.gov.in/" target="_blank">Visit</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Chhattisgarh</summary>
+      <ul>
+        <li><strong>Indravati Tiger Reserve</strong> – <a href="https://www.forest.cg.gov.in/WildLife/English/IndraTs.htm" target="_blank">Visit</a></li>
+        <li><strong>Udanti Sitanadi Tiger Reserve</strong> – <a href="https://gariaband.gov.in/en/tourist-place/udanti-sitanadi-tiger-reserve/" target="_blank">Visit</a></li>
+        <li><strong>Achanakmar Tiger Reserve</strong> – <a href="http://achanakmartigerreserve.com" target="_blank">Visit</a></li>
+      </ul>
+
+       <summary>Goa</summary>
+  <ul>
+    <li><strong>Chorao Island (Dr. Salim Ali) WLS (Bird)</strong> – <a href="https://www.goa.gov.in/places/dr-salim-ali-bird-sanctuary/" target="_blank">Visit</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Gujarat</summary>
+  <ul>
+    <li><strong>Sasan Gir</strong> – <a href="https://junagadh.nic.in/tourist-place/sasan-gir/" target="_blank">Visit</a></li>
+    <li><strong>Nalsarovar Bird Sanctuary</strong> – <a href="https://forests.gujarat.gov.in/nal-sarovar-sanctuary.htm" target="_blank">Visit</a></li>
+    <li><strong>Marine National Park - Kutch</strong> – <a href="https://forests.gujarat.gov.in/marine-nat-park.htm" target="_blank">Visit</a></li>
+    <li><strong>Khijadia Lake and Bird Sanctuary</strong> – <a href="https://jamnagar.nic.in/tourist-place/khijadia-bird-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Porbandar Bird Sanctuary</strong> – <a href="https://forests.gujarat.gov.in/porbandar-sanctuary.htm" target="_blank">Visit</a></li>
+    <li><strong>Thol Lake Bird Sanctuary</strong> – <a href="https://forests.gujarat.gov.in/thol-sanctuary.htm" target="_blank">Visit</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Haryana</summary>
+  <ul>
+    <li><strong>Bhindawas Bird Sanctuary</strong> – <a href="https://jhajjar.nic.in/tourist-place/bhindawas-bird-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Sultanpur Bird Sanctuary</strong> – <a href="https://haryanatourism.gov.in/places_of_interest/sultanpur-bird-sanctuary/" target="_blank">Visit</a></li>
+  </ul>
+
+  
+
+    </details>
+
+    <details>
+  <summary>Karnataka</summary>
+  <ul>
+    <li><strong>Kabini National Park</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Nagarhole National Park</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Bhadra Wildlife Sanctuary</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Adichanchunagiri Wildlife Sanctuary</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Bankapur Peacock Conservation Reserve (Bird)</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Ghataprabha Bird Sanctuary</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Gudavi Bird Sanctuary</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Kokkare Bellur Community Reserve (Bird)</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Ranganathittu Bird Sanctuary</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Bhadra Tiger Reserve</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Kali Tiger Reserve</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+    <li><strong>Biligiri Ranganatha Temple Tiger Reserve</strong> – <a href="https://aranya.gov.in/aranyacms" target="_blank">Visit</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Kerala</summary>
+  <ul>
+    <li><strong>Periyar Tiger Reserve</strong> – <a href="https://www.periyartigerreserve.org/" target="_blank">Visit</a></li>
+    <li><strong>Bandipur National Park</strong> – <a href="https://bandipurtigerreserve.org/" target="_blank">Visit</a></li>
+    <li><strong>Chinnar Wildlife Sanctuary</strong> – <a href="https://www.keralatourism.org/destination/chinnar-wildlife-sanctuary-idukki/218/" target="_blank">Visit</a></li>
+    <li><strong>Eravikulam National Park</strong> – <a href="https://www.keralatourism.org/ecotourism/trekking-programs/eravikulam-eco-tourism/12" target="_blank">Visit</a></li>
+    <li><strong>Chulannur Peafowl WLS</strong> – <a href="https://www.keralatourism.org/destination/mayiladumpara-peacock-sanctuary/513/" target="_blank">Visit</a></li>
+    <li><strong>Kadalundi Bird Sanctuary</strong> – <a href="https://www.keralatourism.org/destination/kadalundi-bird-sanctuary/6/" target="_blank">Visit</a></li>
+    <li><strong>Kumarakom Bird Sanctuary</strong> – <a href="https://www.keralatourism.org/destination/kumarakom-bird-sanctuary/525/" target="_blank">Visit</a></li>
+    <li><strong>Mangalvanam Bird WLS</strong> – <a href="https://www.keralatourism.org/kerala-article/2012/mangalavanam-bird-sanctuary/181" target="_blank">Visit</a></li>
+    <li><strong>Thattekad or Salim Ali Bird Sanctuary</strong> – <a href="https://www.keralatourism.org/ecotourism/trekking-programs/thattekkad-trails/18" target="_blank">Visit</a></li>
+    <li><strong>Parambikulam Tiger Reserve</strong> – <a href="https://www.parambikulam.org/" target="_blank">Visit</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Lakshadweep</summary>
+  <ul>
+    <li><strong>Pitti Wildlife Sanctuary (Bird)</strong> – <a href="https://dwiep.ncscm.res.in/Island/IslandDetails/INLK017" target="_blank">Visit</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Madhya Pradesh</summary>
+  <ul>
+    <li><strong>Van Bihar National Park</strong> – <a href="https://vanviharnationalpark.org/" target="_blank">Visit</a></li>
+    <li><strong>Kuno National Park</strong> – <a href="https://www.kunonationalpark.org/" target="_blank">Visit</a></li>
+    <li><strong>Sanjay Dhubri Tiger Reserve</strong> – <a href="https://forest.mponline.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Veerangana Durgavati Tiger Reserve</strong> – <a href="https://forest.mponline.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Ratapani Tiger Reserve</strong> – <a href="https://forest.mponline.gov.in/eBrochure/eBrochureDetails.aspx?parkid=RTR" target="_blank">Visit</a></li>
+    <li><strong>Madhav Tiger Reserve</strong> – <a href="https://madhavnationalpark.org/" target="_blank">Visit</a></li>
+    <li><strong>Kanha National Park</strong> – <a href="https://www.mptourism.com/destination-kanha-national-park.php" target="_blank">Visit</a></li>
+    <li><strong>Bandhavgarh National Park</strong> – <a href="https://www.mptourism.com/destination-bandhavgarh.php" target="_blank">Visit</a></li>
+    <li><strong>Pench National Park</strong> – <a href="https://www.mptourism.com/destination-pench.php" target="_blank">Visit</a></li>
+    <li><strong>Panna National Park</strong> – <a href="https://www.mptourism.com/destination-panna.php" target="_blank">Visit</a></li>
+    <li><strong>Satpura National Park</strong> – <a href="https://forest.mponline.gov.in/eBrochure/eBrochureDetails.aspx?parkid=5" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Maharashtra</summary>
+  <ul>
+    <li><strong>Pench National Park</strong> – <a href="https://penchtigerreserve.maharashtra.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Jaikwadi Bird Sanctuary</strong> – <a href="https://chhsambhajinagar.in/heritagedetailpages/bird.php" target="_blank">Visit</a></li>
+    <li><strong>Nandur Madhmeshwar Bird Sanctuary</strong> – <a href="https://www.mtdc.co.in/sanctuaries/naygaon-mayur-wildlife-sanctuary-2/" target="_blank">Visit</a></li>
+    <li><strong>Melghat Tiger Reserve</strong> – <a href="https://www.magicalmelghat.in/" target="_blank">Visit</a></li>
+    <li><strong>Sahyadri Tiger Reserve</strong> – <a href="https://www.sahyadritigers.org/" target="_blank">Visit</a></li>
+    <li><strong>Nawegaon Nagzira Tiger Reserve</strong> – <a href="https://www.nawegaonnagzira.com/" target="_blank">Visit</a></li>
+    <li><strong>Bor Tiger Reserve</strong> – <a href="https://maharashtratourism.gov.in/wildlife/bor-wildlife-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Tadoba Tiger Reserve</strong> – <a href="https://mytadoba.mahaforest.gov.in/" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Rajasthan</summary>
+  <ul>
+    <li><strong>Bansiyal Khetri Conservation Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Beed Conservation Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Jaisamand Wildlife Sanctuary</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Jorbeer Gadwal Conservation Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Kumbhalgarh Wildlife Sanctuary</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Mount Abu Wildlife Sanctuary</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>National Chambal Gharial Sanctuary Palighat</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Sajjangarh Wildlife Sanctuary</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Tal Chhapar Sanctuary</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Jhalana Leopard Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Jawai National Park</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Keoladeo Ghana National Park</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Ranthambore National Park</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Sariska Tiger Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Desert National Park</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Mukundara Tiger Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Ramgarh Vishdhari Tiger Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Dholpur-Karauli Tiger Reserve</strong> – <a href="https://obms-tourist.rajasthan.gov.in/" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>West Bengal</summary>
+  <ul>
+    <li><strong>Jaldapara National Park</strong> – <a href="https://forest.wb.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Sundarban National Park</strong> – <a href="https://forest.wb.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Chintamani Kar Bird Sanctuary</strong> – <a href="https://forest.wb.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Kulik Bird Sanctuary</strong> – <a href="https://forest.wb.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Buxa Tiger Reserve</strong> – <a href="https://forest.wb.gov.in/" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+
+<details>
+  <summary>Uttar Pradesh</summary>
+  <ul>
+    <li><strong>Okhla Bird Sanctuary</strong> – <a href="https://gbnagar.nic.in/tourist-place/okhla-bird-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Dudhwa National Park</strong> – <a href="https://www.uptourism.gov.in/en/page/dudhwa-national-park" target="_blank">Visit</a></li>
+    <li><strong>Pilibhit Tiger Reserve</strong> – <a href="https://www.uptourism.gov.in/en/page/pilibhit" target="_blank">Visit</a></li>
+    <li><strong>Chambal Wildlife Sanctuary</strong> – <a href="https://www.uptourism.gov.in/en/page/chambal-wildlife-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Katarniaghat Wildlife Sanctuary</strong> – <a href="https://www.uptourism.gov.in/en/page/katarniaghat-wildlife-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Sur Sarovar (Keetham) Bird Sanctuary</strong> – <a href="https://www.uptourism.gov.in/en/page/sur-sarovar-(keetham)-bird-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Chandraprabha Wildlife Sanctuary</strong> – <a href="https://www.uptourism.gov.in/en/page/chandra-prabha-wildlife-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Suhelwa Wildlife Sanctuary</strong> – <a href="https://www.uptourism.gov.in/en/page/suhelwa-wildlife-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Nawabganj Priyadarshini Bird Sanctuary</strong> – <a href="https://www.uptourism.gov.in/en/page/nawabganj-bird-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Patna Bird Sanctuary</strong> – <a href="https://etah.nic.in/tourist-place/patna-bird-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Saman Bird Sanctuary</strong> – <a href="https://mainpuri.nic.in/tourist-place/saman-bird-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Samaspur Bird Sanctuary</strong> – <a href="https://raebareli.nic.in/tourist-place/samspur-bird-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Sandi Wildlife Sanctuary</strong> – <a href="https://www.upforest.gov.in/web/ForestNew/upfd_Sandi.aspx" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Uttarakhand</summary>
+  <ul>
+    <li><strong>Sattal Bird Sanctuary</strong> – <a href="https://uttarakhandtourism.gov.in/destination/sattal" target="_blank">Visit</a></li>
+    <li><strong>Jhilmi Jheel CR(Bird)</strong> – <a href="https://birding.co.in/jhilmil-jheel-birding/" target="_blank">Visit</a></li>
+    <li><strong>Corbett National Park</strong> – <a href="https://uttarakhandtourism.gov.in/destination/corbett-national-park" target="_blank">Visit</a></li>
+    <li><strong>Govind Wildlife Sanctuary</strong> – <a href="https://uttarakhandtourism.gov.in/destination/govind-national-park" target="_blank">Visit</a></li>
+    <li><strong>Kedarnath Wildlife Sanctuary</strong> – <a href="https://uttarakhandtourism.gov.in/destination/kedarnath-wildlife-sanctuary" target="_blank">Visit</a></li>
+    <li><strong>Askot Wildlife Sanctuary</strong> – <a href="https://pithoragarh.nic.in/tourist-place/askot-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Sonanadi Wildlife Sanctuary</strong> – <a href="https://kalagarhtigerreserve.in/sonanadi-wildlife-sanctuary/" target="_blank">Visit</a></li>
+    <li><strong>Binsar Wildlife Sanctuary</strong> – <a href="https://uttarakhandtourism.gov.in/destination/binsar" target="_blank">Visit</a></li>
+    <li><strong>Pawalgarh Conservation Reserve</strong> – <a href="https://pawalgarhconservationreserve.uk.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Gangotri National Park</strong> – <a href="https://uttarakhandtourism.gov.in/destination/gangotri-national-park" target="_blank">Visit</a></li>
+    <li><strong>Nanda Devi National Park</strong> – <a href="https://uttarakhandtourism.gov.in/destination/nanda-devi-national-park" target="_blank">Visit</a></li>
+    <li><strong>Rajaji Tiger Reserve</strong> – <a href="https://rajajitigerreserve.uk.gov.in/" target="_blank">Visit</a></li>
+    <li><strong>Nandhaur Wildlife Sanctuary</strong> – <a href="https://uttarakhandtourism.gov.in/destination/nandhaur-wildlife-sanctuary" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Jharkhand</summary>
+  <ul>
+    <li><strong>Palamu Tiger Reserve</strong> – <a href="https://forest.jharkhand.gov.in/wings_wildlife_protectedarea_palamau.aspx" target="_blank">Visit</a></li>
+  </ul>
+</details>
+
+
+
+
+    <!-- More states will be added in next updates -->
+  </div>
+
+  <script>
+    const searchBox = document.getElementById('searchBox');
+    const sanctuaryContainer = document.getElementById('sanctuaryContainer');
+
+    searchBox.addEventListener('keyup', function () {
+      const filter = this.value.toLowerCase();
+      const detailsBlocks = sanctuaryContainer.querySelectorAll('details');
+
+      detailsBlocks.forEach(details => {
+        const matches = Array.from(details.querySelectorAll('li')).filter(li => {
+          return li.textContent.toLowerCase().includes(filter);
+        });
+
+        details.open = matches.length > 0;
+
+        Array.from(details.querySelectorAll('li')).forEach(li => {
+          li.style.display = li.textContent.toLowerCase().includes(filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img.avif" alt="Logo" />
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="mentorship.html">Mentorship</a></li>
+          <li><a href="safari.html">Safaris</a></li>
+          <li><a href="competitions.html">Competitions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+       <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="youtude" /></a>
+      
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("input", function () {
+    const filter = searchInput.value.toLowerCase();
+    const allSections = document.querySelectorAll("details");
+
+    allSections.forEach(section => {
+      const summaryText = section.querySelector("summary").textContent.toLowerCase();
+      const items = section.querySelectorAll("li");
+      let sectionMatches = summaryText.includes(filter);
+      let anyItemMatches = false;
+
+      items.forEach(item => {
+        const itemText = item.textContent.toLowerCase();
+        if (itemText.includes(filter) || sectionMatches) {
+          item.style.display = "";
+          anyItemMatches = true;
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      if (sectionMatches || anyItemMatches) {
+        section.style.display = "";
+        section.open = true;
+      } else {
+        section.style.display = "none";
+        section.open = false;
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

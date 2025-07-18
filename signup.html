@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 50px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #1d4d2f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #155c30;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <select id="code">
+        <option value="+91">+91 India</option>
+        <option value="+1">+1 USA</option>
+        <option value="+44">+44 UK</option>
+      </select>
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="password" id="password" placeholder="Create Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const code = document.getElementById("code").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const user = { name, phone: code + " " + phone, email, password };
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      users.push(user);
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Registered successfully!");
+      form.reset();
+    });
+  </script>
+</body>
+</html>

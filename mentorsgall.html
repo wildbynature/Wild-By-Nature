@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentors Gallery</title>
+   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+    }
+
+    main {
+      padding-top: 100px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #333;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .image-wrapper:hover img {
+      transform: scale(1.05);
+    }
+
+    .hover-name {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1em;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-wrapper:hover .hover-name {
+      opacity: 1;
+    }
+
+    .like-button {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .like-button button {
+      background-color: #faf9f9;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+
+    .like-button button:hover {
+      background-color: #e61b6f;
+    }
+
+    .like-count {
+      margin-top: 5px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .image-popup {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+    }
+
+    .image-popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+    }
+
+    .image-popup img.zoomed {
+      transform: scale(1.3);
+      cursor: zoom-out;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 3em;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+            <li><a href="members-gallery.html">Members Gallery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Activities</a>
+          <ul class="dropdown-content">
+            <li><a href="exhibition.html">Exhibition</a></li>
+            <li><a href="safari.html">Safaris</a></li>
+            <li><a href="workshop.html">Workshop</a></li>
+            <li><a href="competition.html">Competition</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Marketplace</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="merchandise.html">Merchandise</a></li>
+            <li><a href="used-gear.html">Used Gear</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <h1>PICTURES TAKEN BY OUR MENTORS</h1>
+   <div class="gallery-container">
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (1).jpg" alt="Wildlife 1" class="popup-image" data-id="av1-1" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-1')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (2).jpg" alt="Wildlife 2" class="popup-image" data-id="av1-2" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-2')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (3).jpg" alt="Wildlife 3" class="popup-image" data-id="av1-3" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-3')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (4).jpg" alt="Wildlife 4" class="popup-image" data-id="av1-4" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-4')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (5).jpg" alt="Wildlife 5" class="popup-image" data-id="av1-5" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-5')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (6).jpg" alt="Wildlife 6" class="popup-image" data-id="av1-6" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-6')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (7).jpg" alt="Wildlife 7" class="popup-image" data-id="av1-7" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-7')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (8).jpg" alt="Wildlife 8" class="popup-image" data-id="av1-8" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-8')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (9).jpg" alt="Wildlife 9" class="popup-image" data-id="av1-9" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-9')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="av1 (10).jpg" alt="Wildlife 10" class="popup-image" data-id="av1-10" />
+      <div class="hover-name">Photo Courtesy: Avanish Dureha</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'av1-10')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+    
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (1).jpg" alt="Wildlife 1" class="popup-image" data-id="gr1-1" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-1')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (2).jpg" alt="Wildlife 2" class="popup-image" data-id="gr1-2" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-2')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (3).jpg" alt="Wildlife 3" class="popup-image" data-id="gr1-3" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-3')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (4).jpg" alt="Wildlife 4" class="popup-image" data-id="gr1-4" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-4')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (5).jpg" alt="Wildlife 5" class="popup-image" data-id="gr1-5" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-5')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (6).jpg" alt="Wildlife 6" class="popup-image" data-id="gr1-6" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-6')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (7).jpg" alt="Wildlife 7" class="popup-image" data-id="gr1-7" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-7')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (8).jpg" alt="Wildlife 8" class="popup-image" data-id="gr1-8" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-8')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (9).jpg" alt="Wildlife 9" class="popup-image" data-id="gr1-9" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-9')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+  <div>
+    <div class="image-wrapper">
+      <img src="gr1 (10).jpg" alt="Wildlife 10" class="popup-image" data-id="gr1-10" />
+      <div class="hover-name">Photo Courtesy: Girish Gowda</div>
+    </div>
+    <div class="like-button">
+      <button onclick="likeImage(this, 'gr1-10')">❤️</button>
+      <div class="like-count">0 Likes</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </main>
+
+  <div class="image-popup" id="imagePopup">
+    <span class="close-popup" id="closePopup">&times;</span>
+    <img id="popupImg" src="" alt="Popup" />
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img.avif" alt="Logo" />
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="mentorship.html">Mentorship</a></li>
+          <li><a href="safari.html">Safaris</a></li>
+          <li><a href="competition.html">Competitions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+       <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="youtude" /></a>
+      
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const popup = document.getElementById("imagePopup");
+    const popupImg = document.getElementById("popupImg");
+    const closeBtn = document.getElementById("closePopup");
+
+    document.querySelectorAll(".popup-image").forEach(img => {
+      img.addEventListener("click", () => {
+        popup.style.display = "flex";
+        popupImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+      popupImg.src = "";
+      popupImg.classList.remove("zoomed");
+    });
+
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+        popupImg.src = "";
+        popupImg.classList.remove("zoomed");
+      }
+    });
+
+    popupImg.addEventListener("click", () => {
+      popupImg.classList.toggle("zoomed");
+    });
+
+    let touchStartY = 0;
+    popup.addEventListener("touchstart", (e) => {
+      touchStartY = e.touches[0].clientY;
+    });
+
+    popup.addEventListener("touchend", (e) => {
+      let touchEndY = e.changedTouches[0].clientY;
+      if (Math.abs(touchStartY - touchEndY) > 100) {
+        popup.style.display = "none";
+        popupImg.src = "";
+        popupImg.classList.remove("zoomed");
+      }
+    });
+
+    function likeImage(button, imageId) {
+      const countDiv = button.nextElementSibling;
+      const likedKey = `liked-${imageId}`;
+
+      if (localStorage.getItem(likedKey)) {
+        alert("You have already liked this image.");
+        return;
+      }
+
+      let currentLikes = parseInt(localStorage.getItem(`likes-${imageId}`)) || 0;
+      currentLikes++;
+      localStorage.setItem(`likes-${imageId}`, currentLikes);
+      localStorage.setItem(likedKey, true);
+
+      countDiv.textContent = `${currentLikes} Like${currentLikes > 1 ? 's' : ''}`;
+    }
+
+    window.onload = () => {
+      document.querySelectorAll(".popup-image").forEach(img => {
+        const imageId = img.getAttribute("data-id");
+        const likeCountDiv = img.closest("div").nextElementSibling.querySelector(".like-count");
+        const savedLikes = localStorage.getItem(`likes-${imageId}`);
+        if (savedLikes !== null) {
+          likeCountDiv.textContent = `${savedLikes} Like${savedLikes > 1 ? 's' : ''}`;
+        }
+      });
+    };
+  </script>
+</body>
+</html>

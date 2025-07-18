@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Your Product | Wildlife Lens</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    form {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    form button {
+      background-color: #2a5a2a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #1e421e;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+       <li class="dropdown">
+            <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+          <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+         <li><a href="members-gallery.html">Members Gallery</a></li>
+         </ul>
+         </li>
+
+        <li class="dropdown"><a href="#acti.html">Activities</a>
+        <ul class="dropdown-content">
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="safari.html">Safaris</a></li>
+        <li><a href="workshop.html">Workshop</a></li>
+        <li><a href="competition.html">Competition</a></li>
+       </ul>
+       </li>
+        <li class="dropdown">
+        <a href="#">Marketplace</a>
+         <ul class="dropdown-content small-dropdown">
+                  <li><a href="merchandise.html">Merchandise</a></li>
+                  <li><a href="used-gear.html">Used Gear</a></li>
+
+        </ul>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+    <div class="auth-button">
+      <a href="signup.html" class="login-btn">Members Sign up</a>
+    </div>
+  </header>
+
+  <!-- Upload Form -->
+  <form id="productForm">
+    <h2>Sell Your Product</h2>
+    <input type="file" id="image" accept="image/*" required />
+    <input type="text" id="product" placeholder="Product Name" required />
+    <input type="text" id="brand" placeholder="Brand" required />
+    <input type="text" id="condition" placeholder="Condition (e.g., New, Like New)" required />
+    <input type="date" id="purchaseDate" required />
+    <textarea id="description" placeholder="Description" rows="4" required></textarea>
+    <input type="number" id="price" placeholder="Price (₹)" required />
+    <input type="tel" id="phone" placeholder="Owner Phone Number" pattern="[0-9]{10}" required />
+    <button type="submit">Upload Product</button>
+  </form>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img.avif" alt="Logo" />
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="mentorship.html">Mentorship</a></li>
+          <li><a href="safari.html">Safaris</a></li>
+          <li><a href="competition.html">Competitions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+     <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+       <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="youtude" /></a>
+      
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JS for popup and redirect -->
+<script>
+  document.getElementById("productForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const image = document.getElementById("image").files[0];
+    const product = document.getElementById("product").value;
+    const brand = document.getElementById("brand").value;
+    const condition = document.getElementById("condition").value;
+    const purchaseDate = document.getElementById("purchaseDate").value;
+    const description = document.getElementById("description").value;
+    const price = document.getElementById("price").value;
+    const phone = document.getElementById("phone").value;
+
+    const reader = new FileReader();
+    reader.onload = function () {
+      const imageUrl = reader.result;
+
+      const productData = {
+        imageUrl,
+        product,
+        brand,
+        condition,
+        purchaseDate,
+        description,
+        price,
+        phone
+      };
+
+      // Get existing products or create new array
+      const existing = JSON.parse(localStorage.getItem("usedGearProducts")) || [];
+      existing.push(productData);
+
+      // Save updated list
+      localStorage.setItem("usedGearProducts", JSON.stringify(existing));
+
+      alert("Product uploaded successfully!");
+      window.location.href = "used-gear.html";
+    };
+
+    reader.readAsDataURL(image);
+  });
+</script>
+
+</body>
+</html>

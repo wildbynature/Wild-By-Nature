@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Safari Information</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+    }
+
+    header, footer {
+      background-color: #fff;
+      color: #333;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .safari-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .safari-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .safari-card {
+      position: relative;
+      max-width: 700px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .safari-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .safari-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .safari-overlay-top {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.274);
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .safari-overlay-bottom {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      color: white;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 10px 16px;
+      border-radius: 18px;
+    }
+
+    .safari-overlay-details {
+      position: absolute;
+      bottom: 70px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.217);
+      color: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    .know-more-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffffffd9;
+      color: #000;
+      padding: 10px 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .safari-card:hover .know-more-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .know-more-btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+   
+    @media (max-width: 768px) {
+      .safari-card {
+        margin: 20px 10px;
+      }
+
+      .safari-title {
+        font-size: 2rem;
+      }
+
+      .safari-overlay-top,
+      .safari-overlay-bottom,
+      .safari-overlay-details {
+        font-size: 1rem;
+      }
+
+      .site-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+            <li><a href="members-gallery.html">Members Gallery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#acti.html">Activities</a>
+          <ul class="dropdown-content">
+            <li><a href="exhibition.html">Exhibition</a></li>
+            <li><a href="safari.html">Safaris</a></li>
+            <li><a href="workshop.html">Workshop</a></li>
+            <li><a href="competition.html">Competition</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Marketplace</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="merchandise.html">Merchandise</a></li>
+            <li><a href="used-gear.html">Used Gear</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SAFARI CONTENT -->
+  <section class="safari-section">
+    <h1 class="safari-title">UPCOMING SAFARIS</h1>
+
+    <div class="safari-card">
+      <img src="GIR.png" alt="Jim Corbett National Park Safari View" />
+      <div class="safari-overlay-top">Jim Corbett National Park</div>
+      <div class="safari-overlay-bottom">A mesmerising landscape and an unforgettable experience</div>
+      <div class="safari-overlay-details">
+        <div><strong>Dates of Tour:</strong> 10th – 13th August 2025</div>
+        <div><strong>Number of Days:</strong> 4 Days / 3 Nights</div>
+        <div><strong>Price:</strong> Rs-10,999</div>
+      </div>
+      <a href="safari-details.html" class="know-more-btn">Know More</a>
+    </div>
+
+    <div class="safari-card">
+      <img src="3.png" alt="Tadoba Safari View" />
+      <div class="safari-overlay-top">Tadoba - TATR</div>
+      <div class="safari-overlay-bottom">The Forest That Never Disappoints</div>
+      <div class="safari-overlay-details">
+        <div><strong>Dates of Tour:</strong> 5th – 8th September 2025</div>
+        <div><strong>Number of Days:</strong> 4 Days / 3 Nights</div>
+          <div><strong>Price:</strong> Rs-10,999</div>
+      </div>
+      <a href="safari-tadoba.html" class="know-more-btn">Know More</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img.avif" alt="Logo" />
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="mentorship.html">Mentorship</a></li>
+          <li><a href="safari.html">Safaris</a></li>
+          <li><a href="competition.html">Competitions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+       <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+       <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="youtude" /></a>
+      
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

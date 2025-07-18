@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Used Gear | Wildlife Lens</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif !important;
+      background-color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    * {
+      font-family: Arial, sans-serif !important;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .sell-btn {
+      background-color: #2a5a2a;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s ease;
+    }
+
+    .sell-btn:hover {
+      background-color: #1e421e;
+    }
+
+    #product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    .buy-now-btn {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      background-color: #d35400;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buy-now-btn:hover {
+      background-color: #b34700;
+    }
+
+    footer.site-footer {
+     
+      color: #fff;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-right .social-icons img {
+      width: 24px;
+      margin-right: 10px;
+    }
+
+    .footer-left img {
+      max-width: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+            <li><a href="members-gallery.html">Members Gallery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#acti.html">Activities</a>
+          <ul class="dropdown-content">
+            <li><a href="exhibition.html">Exhibition</a></li>
+            <li><a href="safari.html">Safaris</a></li>
+            <li><a href="workshop.html">Workshop</a></li>
+            <li><a href="competition.html">Competition</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Marketplace</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="merchandise.html">Merchandise</a></li>
+            <li><a href="used-gear.html">Used Gear</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+    <div class="auth-button">
+      <a href="signup.html" class="login-btn">Members Sign up</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section style="text-align:center; padding: 40px 20px 10px;">
+      <h1>Buy / Sell Product</h1>
+      <div style="margin-top: 20px;">
+        <a href="sell-product.html" class="sell-btn">Sell Your Product</a>
+      </div>
+    </section>
+
+    <!-- Product List -->
+    <section id="product-list">
+      <!-- Cards will be injected here -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img.avif" alt="Logo" />
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="mentorship.html">Mentorship</a></li>
+          <li><a href="safari.html">Safaris</a></li>
+          <li><a href="competition.html">Competitions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+        <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="YouTube" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load Products -->
+  <script>
+    const container = document.getElementById("product-list");
+    const products = JSON.parse(localStorage.getItem("usedGearProducts")) || [];
+
+    if (products.length === 0) {
+      container.innerHTML = "<p style='text-align:center;'>No products listed yet.</p>";
+    } else {
+      products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+          <img src="${product.imageUrl}" alt="${product.product}" />
+          <h3>${product.product}</h3>
+          <p><strong>Brand:</strong> ${product.brand}</p>
+          <p><strong>Condition:</strong> ${product.condition}</p>
+          <p><strong>Purchase Date:</strong> ${product.purchaseDate}</p>
+          <p><strong>Description:</strong> ${product.description}</p>
+          <p><strong>Price:</strong> ₹${product.price}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+  </script>
+
+</body>
+</html>

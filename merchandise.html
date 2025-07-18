@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merchandise | Wildlife Lens</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif !important;
+      overflow-x: hidden;
+      max-width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+    }
+
+    * {
+      font-family: Arial, sans-serif !important;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .merch-section {
+      background-color: #ffffff;
+      padding: 50px 20px;
+    }
+
+    .merch-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .merch-item {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .merch-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: auto;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      margin: 15px 0 10px;
+      color: #222;
+    }
+
+    .merch-item button {
+      background-color: #345f2b;
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .merch-item button:hover {
+      background-color: #888a41;
+    }
+
+    .stars {
+      color: #f1c40f;
+      font-size: 1rem;
+      margin: 8px 0;
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 10px;
+      left: -10px;
+      background-color: #e91e63;
+      color: white;
+      padding: 5px 20px;
+      font-size: 0.72rem;
+      transform: rotate(deg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    footer.site-footer {
+      color: #fff;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column h4,
+    .footer-column ul {
+      margin: 0 0 10px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-right .social-icons img {
+      width: 24px;
+      margin-right: 10px;
+    }
+
+    .footer-left img {
+      max-width: 120px;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <header>
+    <div class="logo">
+      <img src="img.avif" alt="Wildlife Lens Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Galleria</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+            <li><a href="members-gallery.html">Members Gallery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#acti.html">Activities</a>
+          <ul class="dropdown-content">
+            <li><a href="exhibition.html">Exhibition</a></li>
+            <li><a href="safari.html">Safaris</a></li>
+            <li><a href="workshop.html">Workshop</a></li>
+            <li><a href="competition.html">Competition</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Marketplace</a>
+          <ul class="dropdown-content small-dropdown">
+            <li><a href="merchandise.html">Merchandise</a></li>
+            <li><a href="used-gear.html">Used Gear</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="merch-section">
+    <h1>OUR EXCLUSIVE MERCHANDISE</h1>
+    <div class="merch-grid">
+      <div class="merch-item">
+        <div class="ribbon">Best Seller</div>
+        <img src="WBN_Products 5[1].jpg" alt="Product 1">
+        <div class="stars">★★★★☆</div>
+        <p class="price">₹149.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="merch-item">
+        <div class="ribbon">Hot Deal</div>
+        <img src="WBN_Products 3[1].jpg" alt="Product 2">
+        <div class="stars">★★★★★</div>
+        <p class="price">₹149.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="merch-item">
+        <div class="ribbon">Limited</div>
+        <img src="WBN_Products 4[1].jpg" alt="Product 3">
+        <div class="stars">★★★☆☆</div>
+        <p class="price">₹149.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="merch-item">
+        <div class="ribbon">Top Rated</div>
+        <img src="WBN_Products 1[1].jpg" alt="Product 4">
+        <div class="stars">★★★★★</div>
+        <p class="price">₹3,399.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="merch-item">
+        <div class="ribbon">New Arrival</div>
+        <img src="WBN_Products 2[2].jpg" alt="Product 5">
+        <div class="stars">★★★★☆</div>
+        <p class="price">₹3,399.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="merch-item">
+        <div class="ribbon">Exclusive</div>
+        <img src="WBN_Products[1].jpg" alt="Product 6">
+        <div class="stars">★★★★☆</div>
+        <p class="price">₹3,399.00</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="img.avif" alt="Logo" />
+  </div>
+  <div class="footer-links">
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Policies</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Membership</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="safari.html">Safaris</a></li>
+        <li><a href="competition.html">Competitions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-right">
+    <h4>Follow Us</h4>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="YouTube" /></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

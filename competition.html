@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Competitions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #fff;
+      color: #333;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .banner-image {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .competition-title {
+      text-align: center;
+      font-size: 2.8rem;
+      margin: 40px 0;
+      color: #4d3e00;
+    }
+
+    /* COMPETITION SECTION STYLES */
+    .competition-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .competition-details {
+      flex: 1;
+      min-width: 300px;
+      max-width: 700px;
+      color: #444;
+      padding-left: 240px;
+    }
+
+    .competition-subtitle span {
+      background-color: #3f6340;
+      padding: 4px 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-right: 255px;
+    }
+
+    .click-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: #4d3e00;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .winner-title {
+      margin-top: 20px;
+      color: #6b4600;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px solid #c5a300;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .highlights {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 20px;
+    }
+
+    .highlights li {
+      margin-bottom: 8px;
+    }
+
+    .fee, .prize {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .prize {
+      color: #b38a00;
+      font-size: 1.2rem;
+    }
+
+    .participate-btn {
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px solid #444;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .participate-btn:hover {
+      background-color: #444;
+      color: #fff;
+    }
+
+    .competition-images {
+      display: flex;
+      gap: 70px;
+      flex: 1;
+      min-width: 250px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .competition-images img {
+      max-height: 450px;
+      width: auto;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transform: rotate(1deg);
+      border-radius: 8px;
+    }
+
+
+    @media (max-width: 768px) {
+  .competition-title {
+    font-size: 2rem;
+    margin: 30px 0;
+  }
+
+  .competition-section {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .competition-details {
+    padding-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .competition-subtitle span {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .click-title {
+    font-size: 1.2rem;
+  }
+
+  .competition-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .competition-images img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .social-icons a img {
+    margin: 0 8px;
+  }
+}
+
+   
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="img.avif" alt="Wildlife Lens Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Galleria</a>
+            <ul class="dropdown-content small-dropdown">
+              <li><a href="mentorsgall.html">Mentors Gallery</a></li>
+              <li><a href="members-gallery.html">Members Gallery</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#acti.html">Activities</a>
+            <ul class="dropdown-content">
+              <li><a href="exhibition.html">Exhibition</a></li>
+              <li><a href="safari.html">Safaris</a></li>
+              <li><a href="workshop.html">Workshop</a></li>
+              <li><a href="competition.html">Competition</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Marketplace</a>
+            <ul class="dropdown-content small-dropdown">
+              <li><a href="merchandise.html">Merchandise</a></li>
+              <li><a href="used-gear.html">Used Gear</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="safinfo.html">Wildlife Parks & Reserves</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <img src="com.png" alt="Competition Banner" class="banner-image" />
+
+    <!-- PAGE TITLE -->
+    <h1 class="competition-title">COMPETITIONS</h1>
+
+    <!-- COMPETITION CONTENT SECTION -->
+    <section class="competition-section">
+      <div class="competition-details">
+        <h2 class="competition-subtitle"><span>Shooters Clash</span></h2>
+        <h3 class="click-title">Click of the Week</h3>
+        <p>Entry Date: 1.1.2026</p>
+        <p>Last Date of Entry: 5.1.2026</p>
+        <p>Result Date: 7.1.2026</p>
+
+        <h4 class="winner-title">WINNER HIGHLIGHTS</h4>
+        <ul class="highlights">
+          <li>Get Featured in the Winners Gallery.</li>
+          <li>Digital Certificate.</li>
+          <li>Get Free Entry to Battle of the Clicks.</li>
+          <li>Get Wild by Nature T-Shirt and Cap</li>
+        </ul>
+
+        <p class="fee">Participation Fees: Rs xxx/- per entry</p>
+        <p class="prize">Prize Money Rs xxxx/-</p>
+
+        <button class="participate-btn">Participate Now</button>
+      </div>
+
+      <div class="competition-images">
+        <img src="Section 3.png" alt="Leopard Climbing Tree" />
+        <img src="Section 4.png" alt="Crocodile on Tree" />
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <img src="img.avif" alt="Logo" />
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="return-cancellation.html">Return & Cancellation</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Membership</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="safari.html">Safaris</a></li>
+            <li><a href="competitions.html">Competitions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+        <a href="https://www.instagram.com/wild_bynature_official"><img src="instagram-white-logo.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="fuk.png" alt="Facebook" /></a>
+       <a href="https://www.facebook.com/share/1EJGriQpDN/?mibextid=wwXIfr"><img src="you.png" alt="youtude" /></a>
+      
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- End of page-wrapper -->
+</body>
+</html>
